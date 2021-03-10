@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>포트폴리오</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <script src="js/jquery-3.4.1.min.js"></script>
+    <script src="js/fullpage.js"></script>
+	<script src="js/jquery.colorbox-min.js"></script>
+   
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/moonspam/NanumSquare@1.0/nanumsquare.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.14.0/css/all.min.css">
+    <link rel="stylesheet" href="css/fullpage.min.css">
+    <link rel="stylesheet" href="css/reset.css">
+    <link rel="stylesheet" href="css/index.css">
+    <link rel="stylesheet" href="css/colorbox.css">
+    <link rel="shortcut icon" href="img/logo_black2_lSh_icon.ico">
+    
+    <script>
+		$(function(){
+            var size = $('body').width();
+
+            if (size > 1390) {
+                $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:760});
+            } else if (850 < size && size <= 1389){
+                $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:560});
+            } else if (500 < size && size <= 849){                               
+                $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:456});
+            } else if (size <= 500){                               
+                $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:300});
+            };
+
+            $(window).resize(function(){
+                var size = $('body').width();
+                
+                if (size > 1390) {
+                    $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:760});
+                } else if (850 < size && size <= 1389){
+                    $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:560});
+                } else if (500 < size && size <= 849){                               
+                    $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:456});
+                } else if (size <= 500){                               
+                    $(".portfolio_btn").colorbox({iframe:true, innerWidth:'80%', innerHeight:300});
+                };
+            });
+            
+            $(".slide_1 .pf_st_cut>ul>li").click(function(){
+                var i = $(this).index();
+
+                $(".slide_1 .pf_img_container .pf_img_1").css('display', 'none');
+                $(".slide_1 .pf_img_container .pf_img_1").eq(i).css('display','block');
+                
+                $(".slide_1 .pf_txt_container .mpf_img .pf_img_1").css('display', 'none');
+                $(".slide_1 .pf_txt_container .mpf_img .pf_img_1").eq(i).css('display','block');
+            });
+            $(".slide_2 .pf_st_cut>ul>li").click(function(){
+                var i = $(this).index();
+
+                $(".slide_2 .pf_img_container .pf_img_1").css('display', 'none');
+                $(".slide_2 .pf_img_container .pf_img_1").eq(i).css('display','block');
+                
+                $(".slide_2 .pf_txt_container .mpf_img .pf_img_1").css('display', 'none');
+                $(".slide_2 .pf_txt_container .mpf_img .pf_img_1").eq(i).css('display','block');
+            });
+            $(".slide_3 .pf_st_cut>ul>li").click(function(){
+                var i = $(this).index();
+
+                $(".slide_3 .pf_img_container .pf_img_1").css('display', 'none');
+                $(".slide_3 .pf_img_container .pf_img_1").eq(i).css('display','block');
+            
+                $(".slide_3 .pf_txt_container .mpf_img .pf_img_1").css('display', 'none');
+                $(".slide_3 .pf_txt_container .mpf_img .pf_img_1").eq(i).css('display','block');
+            });
+        });
+	</script>
+</head>
+
+
+<body>
+    <nav id="navTop">
+        <div id="navTop_box">
+            <div id="logo">
+                <div><img src="img/logo_black2.png" alt=""></div>
+                <span>박윤재 / Park YunJae</span>
+            </div>
+            <ul id="topMenu">
+                <li data-menuanchor="0st"><a href="#0st">HOME</a></li>
+                <li data-menuanchor="1st"><a href="#1st">PROFILE</a></li>
+                <li data-menuanchor="2st"><a href="#2st">PORTFOLIO</a></li>
+            </ul>
+        </div>
+    </nav>
+    <div id="full-page">
+        <div class="section s0">
+            <div class="section_home">
+                <h1>PORTFOLIO</h1>
+            </div>
+        </div>
+        <div class="section s1">
+            <div class="section_content section_content1">
+            <h2>PROFILE</h2>
+                <div class="pr_container">
+                    <div class="pr_profile">
+                        <div><img src="img/000.bmp" /></div>
+                        <ul>
+                            <li>박윤재 / Park YunJae</li>
+                            <li><i class="fas fa-user"></i>방송(조연출)</li>
+                            <li><i class="fas fa-calendar"></i>1994.10.30 (만 26세)</li>
+                            <li><i class="fas fa-map-marker-alt"></i>인천 남동구 거주</li>
+                            
+                        </ul>
+                    </div>
+                    <div class="right_box">
+                        <div class="pr_box edu_box">
+                            <h3 class="pr_title edu_title">EDUCATION</h3>
+                            <div class="pr_date edu_date">
+                                <div>2020.09 - 2021.03</div>
+                            </div>
+                            <div class="pr_txt edu_txt">
+                                <div>광고콘텐츠 제작</div>
+                                <ul>
+                                    <li>- 교육기관: 방송정보국제교육원 (서울 영등포구)</li>
+                                    <li>- 교육기간: 2020-09-21 ~ 2021.03.17</li>
+                                    <li>- 교육내용: 광고콘텐츠제작</li>  
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="pr_box cer_box">
+                            <h3 class="pr_title cer_title">LICENSE</h3>
+                            <div class="pr_date cer_date">
+                                <div>2006.02</div>
+                                <div>2015.12</div>
+                            </div>
+                            <div class="pr_txt cer_txt">
+                                <div>워드프로세서 1급</div>
+                                <div>ITQ OA MASTER(파워포인트, 아래한글, 인터넷)</div>
+                            </div>
+                        </div>
+                        <div class="ct_box">
+                           <div class="ct_inbox">
+                               <div class="ct_title"><h3>CONTACT</h3></div>
+                               <div class="ct_txt">
+                                   <ul>
+                                       <li><img src="img/con_phone.png" alt=""></li>
+                                       <li>010-2792-4321</li>
+                                   </ul>
+                                    <ul>
+                                       <li><img src="img/con_email.png" alt=""></li>
+                                       <li>ynjap4321@naver.com</li>
+                                   </ul>
+                                   <ul>
+                                       <li><img src="img/con_kakao.png" alt=""></li>
+                                       <li>ID: yjyj103</li>
+                                   </ul>
+                               </div>
+                           </div>
+                            
+                        </div>
+                    </div>
+                </div><!--pr_container-->
+            </div><!--section_box section_box_content-->
+        </div><!--section s1-->
+        <div class="section s2">
+            <div class="section_content section_content3">
+<!--               포트폴리오 1-->
+                <div class="slide slide_1">
+                    <h2>신세계 타이틀시퀀스</h2>
+                    <div class="pf_img_container">
+                        <div class="image">
+                            <div class="pf_img_1" style="display:block;"><img src="img/0.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/1.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/2.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/3.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/4.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/5.jpg" /></div>
+                        </div>   
+                        <div class="pf_st_cut">
+                            <ul>
+                                <li><img src="img/0.jpg"></li>
+                                <li><img src="img/1.jpg"></li>
+                                <li><img src="img/2.jpg"></li>
+                                <li><img src="img/3.jpg"></li>
+                                <li><img src="img/4.jpg"></li>
+                                <li><img src="img/5.jpg"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pf_txt_container" >
+                        <h3 class="pf_title">신세계 타이틀시퀀스</h3>
+                        <div class="mpf_img mpf_img_2">
+                                <div>
+                                    <div class="pf_img_1" style="display:block;"><img src="img/0.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/1.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/2.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/3.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/4.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/5.jpg" /></div>
+                                </div>    
+                                <div class="pf_st_cut">
+                                    <ul>
+                                        <li><img src="img/0.jpg"></li>
+                                <li><img src="img/1.jpg"></li>
+                                <li><img src="img/2.jpg"></li>
+                                <li><img src="img/3.jpg"></li>
+                                <li><img src="img/4.jpg"></li>
+                                <li><img src="img/5.jpg"></li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div>
+                            <span class="pf_name">프로젝트 명:</span>
+                            <span class="pf_txt">신세계타이틀시퀀스</span>
+                        </div>
+                        <div>
+                            <span class="pf_name">제작 소요기간: </span>
+                            <span class="pf_txt">2020.11 1주</span>
+                        </div>
+                        <div>
+                            <span class="pf_name">설명:</span>
+                            <span class="pf_txt">애프터이펙트에서 3D 카메라, 애니메이션 효과를 활용해보았습니다. 이 작업을 통해 창의적인 카메라 움직임과 감각적인 애니메이션 효과에 대해 연구해볼 수 있었습니다.</span>
+                        </div>
+                        <div>
+                            <span class="pf_name">작업툴:</span>
+                            <span class="pf_txt">포토샵, 일러스트, 애프터이펙트</span>
+                        </div>
+                        <div class="pf_gosite"><a href="https://www.youtube.com/embed/Y_gOLr9Q5nQ" class="portfolio_btn">CLICK TO PLAY</a></div>    
+                    </div>
+                </div>
+<!--                포트폴리오 2-->
+                <div class="slide slide_2">
+                    <h2>저는 마음으로 소리를 듣습니다.</h2>
+                    <div class="pf_img_container">
+                        <div class="image">
+                            <div class="pf_img_1" style="display:block;"><img src="img/a1.jpg" /></div>
+                              <div class="pf_img_1"><img src="img/a2.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/a3.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/a4.jpg" /></div>
+                            <div class="pf_img_1"><img src="img/a5.jpg" /></div>
+                             <div class="pf_img_1"><img src="img/a6.jpg" /></div>
+                        </div>   
+                        <div class="pf_st_cut">
+                            <ul>
+                                <li><img src="img/a1.jpg"></li>
+                             
+                                <li><img src="img/a2.jpg"></li>
+                                <li><img src="img/a3.jpg"></li>
+                                <li><img src="img/a4.jpg"></li>
+                                <li><img src="img/a5.jpg"></li>
+                                   <li><img src="img/a6.jpg"></li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="pf_txt_container" >
+                        <h3 class="pf_title">저는 마음으로 소리를 듣습니다.</h3>
+                        <div class="mpf_img mpf_img_2">
+                                <div>
+                                    <div class="pf_img_1" style="display:block;"><img src="img/0.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/1.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/2.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/3.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/4.jpg" /></div>
+                                    <div class="pf_img_1"><img src="img/5.jpg" /></div>
+                                </div>    
+                                <div class="pf_st_cut">
+                                    <ul>
+                                           <li><img src="img/a1.jpg"></li>
+                             
+                                <li><img src="img/a2.jpg"></li>
+                                <li><img src="img/a3.jpg"></li>
+                                <li><img src="img/a4.jpg"></li>
+                                <li><img src="img/a5.jpg"></li>
+                                   <li><img src="img/a6.jpg"></li>
+                                    </ul>
+                                </div>
+                        </div>
+                        <div>
+                            <span class="pf_name">프로젝트 명:</span>
+                            <span class="pf_txt">저는 마음으로 소리를 듣습니다.(공모전출품)</span>
+                        </div>
+                        <div>
+                            <span class="pf_name">제작 소요기간: </span>
+                            <span class="pf_txt">2021.1 3주</span>
+                        </div>
+                        <div>
+                            <span class="pf_name">설명:</span>
+                            <span class="pf_txt">(난청인을 위한) 다시 듣고 싶은 추억의 소리. 1분 30초 내외
+다시 듣고 싶은 추억의 소리를 ‘사랑해’로 설정. 연인과 과거에 인상적이었던 순간을 회상하는 내용의 드라마 제작하였습니다. 모든 과정 하나하나가 세심해야만 하는 작업이었습니다. 난청인의 입장을 이해하며 이야기를 풀어나가야 했기 때문입니다. 자칫하면 실수할 수 있기에 난청에 관한 교육영상을 보며 공부했습니다. 뜻깊은 작업이었다고 생각합니다.</span>
+                        </div>
+                        <div>
+                            <span class="pf_name">작업툴:</span>
+                            <span class="pf_txt">SONY a7m3, 프리미어</span>
+                        </div>
+                        <div class="pf_gosite"><a href="https://www.youtube.com/embed/FFlDBCX_wa4" class="portfolio_btn">CLICK TO PLAY</a></div>    
+                    </div>
+                </div>
+<!--                포트폴리오 3-->
+              
+            </div>
+            <div id="footer">
+                <div id="footer_txt">Copyright 2021.Hong GilDong All rights reserved</div>
+            </div>
+        </div>
+    </div>
+
+<script>
+    new fullpage('#full-page', {
+        licenseKey:'OPEN-SOURCE-GPLV3-LICENSE',
+        anchors:["0st","1st","2st"],
+        menu:"#topMenu",
+        sectionsColor:['#fff', '#eee', '#fff'],
+        scrollingSpeed: 1000,
+        slidesNavigation: true,
+		slidesNavPosition: 'bottom',
+        onLeave: function(origin, destination, direction) {
+            var leavingSection = this;
+            
+            if(origin.index == 0) {
+                $('.right_box .ct_inbox .ct_txt ul li').delay(600).fadeIn();
+            }
+            if(origin.index == 2) {
+                $('.right_box .ct_inbox .ct_txt ul li').delay(600).fadeIn();
+            }
+            if(origin.index == 1) {
+                $('.right_box .ct_inbox .ct_txt ul li').fadeOut();
+            }
+        },
+    });
+</script>
+</body>
+</html>
